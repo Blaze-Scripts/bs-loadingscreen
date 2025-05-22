@@ -1,7 +1,7 @@
 # bs-loadingscreen
 
 A clean and customizable RedM loading screen.
-
+(Browser Preview)[https://blazescripts.dev/loadingscreen/]
 <div align="center">
 
 <img src="https://i.imgur.com/W312rl6.jpeg" width="600" alt="Screenshot Preview">
