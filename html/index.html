@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blaze Scripts Loadingscreen</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="background-container">
+        <video id="background-video" autoplay loop muted playsinline></video>
+        <div id="youtube-wrapper">
+            <div id="youtube-container"></div>
+            <div id="youtube-overlay"></div>
+        </div>
+        <img id="background-image" src="" alt="Background">
+        <div id="overlay"></div>
+    </div>
+
+    <div id="content-container">
+        <div id="logo-container">
+            <img id="logo" src="" alt="Blaze Scripts">
+        </div>
+        
+        <div id="welcome-container">
+            <h1 id="welcome-text"></h1>
+        </div>
+        
+        <div id="tips-container">
+            <p id="tip-text"></p>
+        </div>
+        
+        <div id="loading-container">
+            <div id="progress-container">
+                <div id="progress-bar-container">
+                    <div id="progress-bar-bg"></div>
+                    <div id="progress-bar"></div>
+                </div>
+            </div>
+            
+            <div id="loading-status-container">
+                <div id="loading-text"></div>
+                <div id="loading-status"></div>
+                <div id="loading-action"></div>
+            </div>
+            
+            <div id="finishing-container">
+                <div id="finishing-message">Finishing up...</div>
+                <div id="finished-line">You will be loaded into the world shortly...</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="music-control-container">
+        <button id="music-toggle">
+            <i class="fas fa-music"></i>
+        </button>
+        
+        <div id="music-controls">
+            <div id="music-info">
+                <span id="music-title">Loading...</span>
+            </div>
+            <div id="music-buttons">
+                <button id="music-prev"><i class="fas fa-backward"></i></button>
+                <button id="music-play-pause"><i class="fas fa-play"></i></button>
+                <button id="music-next"><i class="fas fa-forward"></i></button>
+                <div id="volume-container">
+                    <i class="fas fa-volume-up" id="volume-icon"></i>
+                    <input type="range" id="volume-slider" min="0" max="100" value="50">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="music-player" preload="auto"></audio>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    
+    <script src="assets/js/youtube.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
