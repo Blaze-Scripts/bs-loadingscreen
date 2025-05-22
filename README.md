@@ -150,7 +150,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Credits
 
-- Created by [Blaze Scripts](http://store.blazescripts.dev/)
+- Created by [Blaze Scripts](https://github.com/Blaze-Scripts)
 - Music created with SUNO AI (Commercial rights owned by Blaze Scripts, usage rights granted to users)
 - Background video credits: Milky Way, Inc. (https://www.youtube.com/watch?v=u5IuKGp2LWY)
 - Special thanks to QBOX Team for their loading screen implementation which helped understand loading processes
