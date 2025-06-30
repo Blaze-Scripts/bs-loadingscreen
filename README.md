@@ -25,10 +25,6 @@ Customizable RedM Loading Screen - Music, Progress, and Immersion in One.
 - 👨‍🌾 Tips: Engaging typewriter animation for tips
 - 🧪 Tested with RedM Canary latest builds
 
-
-> ⚠️ **IMPORTANT**: As of May 21, 2025, the loading screen feature is **only supported in RedM Canary**. You must use the Canary branch of RedM for this resource to work properly. The loading screen feature was recently re-added to RedM Canary and is not available in the stable branch (soon.).
-
-
 ---
 
 ## 🎬 Preview
