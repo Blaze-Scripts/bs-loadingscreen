@@ -3,7 +3,7 @@ game 'rdr3'
 rdr3_warning 'I acknowledge that this is a prerelease build of RedM, and I am aware my resources *will* become incompatible once RedM ships.'
 
 author 'Blaze Scripts'
-version '1.0.0'
+version '1.0.1'
 description 'Clean and modern loading screen for RedM'
 lua54 'yes'
 

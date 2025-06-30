@@ -4,9 +4,20 @@ const config = {
     logo: "assets/img/logo.png",
     
     // Background Settings
-    backgroundType: "video", // Options: "video", "youtube", "image"
+    backgroundType: "slideshow", // Options: "video", "youtube", "image", "slideshow"
     background: "assets/video/background-video.mp4",
-    backgroundImage: "assets/img/background.png",
+    backgroundImage: "assets/img/background_1.png",
+    
+    // Slideshow Settings
+    backgroundImages: [
+        "assets/img/background_1.png",
+        "assets/img/background_2.jpg",
+        "assets/img/background_3.jpg",
+        "assets/img/background_4.jpg"
+        // Add more images here
+    ],
+    slideshowEnabled: true, // Set to true to enable slideshow mode
+    slideshowDuration: 5000, // Duration in milliseconds (5 seconds)
     
     // YouTube-specific Configuration
     YouTubeID: "u5IuKGp2LWY",

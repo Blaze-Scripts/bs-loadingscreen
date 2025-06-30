@@ -2,15 +2,14 @@
 
 A clean and customizable RedM loading screen.
 
+[Browser Preview](https://blazescripts.dev/loadingscreen)
+
 <div align="center">
 
 <img src="https://i.imgur.com/W312rl6.jpeg" width="600" alt="Screenshot Preview">
 <a href="https://youtu.be/YKOX_EpNV6Q"><img src="https://img.youtube.com/vi/YKOX_EpNV6Q/maxresdefault.jpg" width="600" alt="Video Preview"></a>
 <p><em>Click the image above to watch the video preview</em></p>
 </div>
-
-. 
-> ⚠️ **IMPORTANT**: As of May 21, 2025, the loading screen feature is **only supported in RedM Canary**. You must use the Canary branch of RedM for this resource to work properly. The loading screen feature was recently re-added to RedM Canary and is not available in the stable branch (soon.).
 
 ## Features
 
@@ -24,18 +23,6 @@ A clean and customizable RedM loading screen.
 - **Customizable**: Easy configuration through config.js
 
 ## Installation
-
-### Prerequisites
-
-- **RedM Canary**: This resource requires the Canary branch of RedM.
-
-### How to switch to RedM Canary
-
-1. Open the FiveM/RedM launcher
-2. Go to Settings
-3. Under the "Game" section, check "Enable Canary release channel"
-4. Restart the launcher
-5. Make sure RedM is now showing "Canary" in its version
 
 ### Resource Installation
 
@@ -89,6 +76,7 @@ All configuration options are available in `html/assets/js/config.js`:
 - For video: Place MP4 files in `html/assets/video/` and update config
 - For image: Place image files in `html/assets/img/` and update config
 - For YouTube: Set `backgroundType` to "youtube" and provide a `YouTubeID`
+- For slideshow: Place image files in `html/assets/img/` and update config
 
 ### Changing Logo
 1. Replace `html/assets/img/logo.png` with your own logo

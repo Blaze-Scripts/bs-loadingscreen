@@ -57,6 +57,11 @@ body {
     overflow: hidden;
 }
 
+#background-image {
+    transition: opacity 1.5s ease-in-out;
+    object-fit: cover;
+}
+
 #youtube-container {
     position: absolute;
     top: 0;

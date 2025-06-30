@@ -39,6 +39,8 @@ let isMusicPlaying = false;
 let dataFileCount = 0;
 let currentDataFile = 0;
 let isShuttingDown = false;
+let slideshowInterval;
+let currentImageIndex = 0;
 
 /**
  * Initialize the loading screen with configuration from config.js
@@ -99,6 +101,14 @@ function initializeLoadingScreen() {
             }
             break;
             
+        case "slideshow":
+            if (config.slideshowEnabled && config.backgroundImages && config.backgroundImages.length > 0) {
+                startSlideshow();
+            } else {
+                useBackgroundImage();
+            }
+            break;
+            
         case "image":
         default:
             useBackgroundImage();
@@ -152,6 +162,44 @@ function initializeLoadingScreen() {
         backgroundImage.src = config.backgroundImage;
         backgroundImage.style.display = "block";
         console.log("Using background image:", config.backgroundImage);
+    }
+    
+    function startSlideshow() {
+        if (slideshowInterval) {
+            clearInterval(slideshowInterval);
+        }
+        
+        currentImageIndex = 0;
+        showSlideshowImage(currentImageIndex);
+        
+        slideshowInterval = setInterval(() => {
+            currentImageIndex = (currentImageIndex + 1) % config.backgroundImages.length;
+            showSlideshowImage(currentImageIndex);
+        }, config.slideshowDuration);
+    }
+    
+    function showSlideshowImage(index) {
+        if (!config.backgroundImages || config.backgroundImages.length === 0) return;
+        
+        backgroundVideo.style.display = "none";
+        youtubeWrapper.style.display = "none";
+        
+        backgroundImage.style.opacity = '0';
+        
+        setTimeout(() => {
+            const nextImage = new Image();
+            nextImage.onload = function() {
+                backgroundImage.src = config.backgroundImages[index];
+                backgroundImage.style.display = "block";
+                
+                requestAnimationFrame(() => {
+                    backgroundImage.style.opacity = '1';
+                });
+            };
+            nextImage.src = config.backgroundImages[index];
+            
+            console.log("Showing slideshow image:", config.backgroundImages[index]);
+        }, 750);
     }
     
     document.documentElement.style.setProperty('--primary-color', config.colors.primary);
