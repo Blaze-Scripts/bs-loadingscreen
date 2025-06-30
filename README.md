@@ -17,13 +17,13 @@ Customizable RedM Loading Screen - Music, Progress, and Immersion in One.
 ## 📌 Features
 - 🎵 Music support (playlist, shuffle, volume control)
 - 💦 AI generated Western Music included and ready to use
-- 🖼️ Background video, youtube video or image with full customization
+- 🖼️ Background video, youtube video, image slideshow or image with full customization
 - 📶 Dynamic progress bar synced with client load status
 - 🧑 Player Personalization: Welcome message with player's name
 - ⚙️ Modular config via `config.js`
 - 🧱 Easy to style and integrate with your RP server branding
 - 👨‍🌾 Tips: Engaging typewriter animation for tips
-- 🧪 Tested with RedM Canary latest builds
+- 🧪 Tested with RedM Release latest builds
 
 ---
 
@@ -43,7 +43,7 @@ Customizable RedM Loading Screen - Music, Progress, and Immersion in One.
 
 | Platform | Compatible |
 |----------|------------|
-| RedM     | ✅ Yes (Canary) |
+| RedM     | ✅ Yes |
 | FiveM    | ✅ Yes (change fxmanifest game)|
 
 |Frameworks| Compatible |
@@ -54,8 +54,6 @@ Customizable RedM Loading Screen - Music, Progress, and Immersion in One.
 | QBCore   | ✅ Compatible |
 | ESX      | ✅ Compatible |
 | Standalone  | ✅ Compatible |
-
-**RedM Canary**: This resource requires the Canary branch of RedM.
 
 ---
 
@@ -90,10 +88,21 @@ const config = {
     logo: "assets/img/logo.png",
     
     // Background Settings
-    backgroundType: "video", // Options: "video", "youtube", "image"
+    backgroundType: "video", // Options: "video", "youtube", "image", "slideshow"
     background: "assets/video/background-video.mp4",
-    backgroundImage: "assets/img/background.png",
+    backgroundImage: "assets/img/background_1.png",
     
+    // Slideshow Settings
+    backgroundImages: [
+        "assets/img/background_1.png",
+        "assets/img/background_2.jpg",
+        "assets/img/background_3.jpg",
+        "assets/img/background_4.jpg"
+        // Add more images here
+    ],
+    slideshowEnabled: false, // Set to true to enable slideshow mode
+    slideshowDuration: 5000, // Duration in milliseconds (5 seconds)
+
     // YouTube-specific Configuration
     YouTubeID: "u5IuKGp2LWY",
     YouTubeStartTime: 0,
@@ -147,6 +156,7 @@ You can customize layout in `index.html` and styles in `style.css`.
 ---
 
 ## 📦 Exports & Events
+
 
 The loading screen can be shut down automatically or manually from another resource:
 
@@ -202,18 +212,11 @@ end
 - For video: Place MP4 files in `html/assets/video/` and update config
 - For image: Place image files in `html/assets/img/` and update config
 - For YouTube: Set `backgroundType` to "youtube" and provide a `YouTubeID`
+- For Slideshow: Set `backgroundType` to "slideshow" and provide a `backgroundImages` array
 
 ### 🎵 Adding Music
 1. Place MP3 files in `html/assets/music/`
 2. Add entries to the `musicList` in config.js
-
-### 🚀 How to switch to RedM Canary
-
-1. Open the FiveM/RedM launcher
-2. Go to Settings
-3. Under the "Game" section, check "Enable Canary release channel"
-4. Restart the launcher
-5. Make sure RedM is now showing "Canary" in its version
 
 ---
 
@@ -240,4 +243,3 @@ Attribution appreciated. Don’t resell without consent.
 - Music created with SUNO AI (Commercial rights owned by Blaze Scripts, usage rights granted to users)
 - Background video credits: Milky Way, Inc. (https://www.youtube.com/watch?v=u5IuKGp2LWY)
 - Special thanks to QBOX Team for their loading screen implementation which helped understand loading processes
-
